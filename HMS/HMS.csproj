@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C3FBF28-9EBC-416A-B138-F2EAD1735627}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HMS</RootNamespace>
+    <AssemblyName>HMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\HMS.mdf" />
+    <Content Include="App_Data\HMS_log.ldf" />
+    <Content Include="images\Add.png" />
+    <Content Include="images\Delete.png" />
+    <Content Include="images\List.png" />
+    <Content Include="images\PatientRegister.png" />
+    <Content Include="images\Personal Details.png" />
+    <Content Include="images\report.ico" />
+    <Content Include="images\Report.png" />
+    <Content Include="images\Retrieve.png" />
+    <Content Include="images\schedule.png" />
+    <Content Include="images\StaffRegister.png" />
+    <Content Include="images\Update.png" />
+    <Content Include="images\Visitation icon.jpg" />
+    <Content Include="MasterPage.Master" />
+    <Content Include="PangYeanPeen\AddPrescription.aspx" />
+    <Content Include="PangYeanPeen\DeletePrescription.aspx" />
+    <Content Include="PangYeanPeen\DispensedDrug.xml" />
+    <Content Include="PangYeanPeen\HardCodeMonthDisplay.xml" />
+    <Content Include="PangYeanPeen\MonthlyDispensedDrugsReport.aspx" />
+    <Content Include="PangYeanPeen\MonthlyDrugQuantityDispensedReport.aspx" />
+    <Content Include="PangYeanPeen\PharmacistView.aspx" />
+    <Content Include="PangYeanPeen\PrescriptionHomePage.aspx" />
+    <Content Include="PangYeanPeen\RetrievePrescription.aspx" />
+    <Content Include="PangYeanPeen\UpdatePrescription.aspx" />
+    <Content Include="PangYeanPeen\ViewPrescriptionHomePage.aspx" />
+    <Content Include="Pic\private.jpg" />
+    <Content Include="Pic\semi private.jpg" />
+    <Content Include="Pic\standard.jpg" />
+    <Content Include="Shirleyann\AdmissionReport.aspx" />
+    <Content Include="Shirleyann\SummaryAdmissionReport.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WelcomeHome.aspx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Shirleyann\AdmissionHomepage.aspx" />
+    <Content Include="Shirleyann\CreateAdmission.aspx" />
+    <Content Include="Shirleyann\DichargeByDoctor.aspx" />
+    <Content Include="Shirleyann\DischargeByNurse.aspx" />
+    <Content Include="Shirleyann\PatientCheckUp.aspx" />
+    <Content Include="Shirleyann\ResourcesUsed.aspx" />
+    <Content Include="Shirleyann\Today%27sAdmission.aspx" />
+    <Content Include="Shirleyann\WardInfo.aspx" />
+    <Content Include="Shirleyann\WardStaff.aspx" />
+    <Content Include="TanAngie\LoginChangePassword.aspx" />
+    <Content Include="TanAngie\LoginForgetPassword.aspx" />
+    <Content Include="TanAngie\LoginPage.aspx" />
+    <Content Include="TanAngie\PatientCreate.aspx" />
+    <Content Include="TanAngie\PatientDetails.aspx" />
+    <Content Include="TanAngie\PatientDoctorVisit.aspx" />
+    <Content Include="TanAngie\PatientGenerateReport.aspx" />
+    <Content Include="TanAngie\PatientList.aspx" />
+    <Content Include="TanAngie\PatientUpdate.aspx" />
+    <Content Include="TanAngie\PatientVisitation.aspx" />
+    <Content Include="TanAngie\StaffAddNewSchedule.aspx" />
+    <Content Include="TanAngie\StaffCreate.aspx" />
+    <Content Include="TanAngie\StaffDelete.aspx" />
+    <Content Include="TanAngie\StaffDetails.aspx" />
+    <Content Include="TanAngie\StaffGenerateReport.aspx" />
+    <Content Include="TanAngie\StaffHomePage.aspx" />
+    <Content Include="TanAngie\StaffList.aspx" />
+    <Content Include="TanAngie\StaffUpdate.aspx" />
+    <Content Include="TanDingKang\AddAppointment.aspx" />
+    <Content Include="TanDingKang\AddAppointment2.aspx" />
+    <Content Include="TanDingKang\CancelAppointment.aspx" />
+    <Content Include="TanDingKang\AppointmentHomePage.aspx" />
+    <Content Include="TanDingKang\Login.aspx" />
+    <Content Include="TanDingKang\ReportAppointment.aspx" />
+    <Content Include="TanDingKang\ReportAppointment2.aspx" />
+    <Content Include="TanDingKang\SendEmail.aspx" />
+    <Content Include="TanDingKang\EditAppointment.aspx" />
+    <Content Include="TanDingKang\UpdateAppointment.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PangYeanPeen\AddPrescription.aspx.cs">
+      <DependentUpon>AddPrescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PangYeanPeen\AddPrescription.aspx.designer.cs">
+      <DependentUpon>AddPrescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PangYeanPeen\DeletePrescription.aspx.cs">
+      <DependentUpon>DeletePrescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PangYeanPeen\DeletePrescription.aspx.designer.cs">
+      <DependentUpon>DeletePrescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PangYeanPeen\MonthlyDispensedDrugsReport.aspx.cs">
+      <DependentUpon>MonthlyDispensedDrugsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PangYeanPeen\MonthlyDispensedDrugsReport.aspx.designer.cs">
+      <DependentUpon>MonthlyDispensedDrugsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PangYeanPeen\MonthlyDrugQuantityDispensedReport.aspx.cs">
+      <DependentUpon>MonthlyDrugQuantityDispensedReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PangYeanPeen\MonthlyDrugQuantityDispensedReport.aspx.designer.cs">
+      <DependentUpon>MonthlyDrugQuantityDispensedReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PangYeanPeen\PharmacistView.aspx.cs">
+      <DependentUpon>PharmacistView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PangYeanPeen\PharmacistView.aspx.designer.cs">
+      <DependentUpon>PharmacistView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PangYeanPeen\PrescriptionHomePage.aspx.cs">
+      <DependentUpon>PrescriptionHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PangYeanPeen\PrescriptionHomePage.aspx.designer.cs">
+      <DependentUpon>PrescriptionHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PangYeanPeen\RetrievePrescription.aspx.cs">
+      <DependentUpon>RetrievePrescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PangYeanPeen\RetrievePrescription.aspx.designer.cs">
+      <DependentUpon>RetrievePrescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PangYeanPeen\UpdatePrescription.aspx.cs">
+      <DependentUpon>UpdatePrescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PangYeanPeen\UpdatePrescription.aspx.designer.cs">
+      <DependentUpon>UpdatePrescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PangYeanPeen\ViewPrescriptionHomePage.aspx.cs">
+      <DependentUpon>ViewPrescriptionHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PangYeanPeen\ViewPrescriptionHomePage.aspx.designer.cs">
+      <DependentUpon>ViewPrescriptionHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\AdmissionHomepage.aspx.cs">
+      <DependentUpon>AdmissionHomepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\AdmissionHomepage.aspx.designer.cs">
+      <DependentUpon>AdmissionHomepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\AdmissionReport.aspx.cs">
+      <DependentUpon>AdmissionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\AdmissionReport.aspx.designer.cs">
+      <DependentUpon>AdmissionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\CreateAdmission.aspx.cs">
+      <DependentUpon>CreateAdmission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\CreateAdmission.aspx.designer.cs">
+      <DependentUpon>CreateAdmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\DichargeByDoctor.aspx.cs">
+      <DependentUpon>DichargeByDoctor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\DichargeByDoctor.aspx.designer.cs">
+      <DependentUpon>DichargeByDoctor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\DischargeByNurse.aspx.cs">
+      <DependentUpon>DischargeByNurse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\DischargeByNurse.aspx.designer.cs">
+      <DependentUpon>DischargeByNurse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\PatientCheckUp.aspx.cs">
+      <DependentUpon>PatientCheckUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\PatientCheckUp.aspx.designer.cs">
+      <DependentUpon>PatientCheckUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\ResourcesUsed.aspx.cs">
+      <DependentUpon>ResourcesUsed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\ResourcesUsed.aspx.designer.cs">
+      <DependentUpon>ResourcesUsed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\SummaryAdmissionReport.aspx.cs">
+      <DependentUpon>SummaryAdmissionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\SummaryAdmissionReport.aspx.designer.cs">
+      <DependentUpon>SummaryAdmissionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\Today%27sAdmission.aspx.cs">
+      <DependentUpon>Today%27sAdmission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\Today%27sAdmission.aspx.designer.cs">
+      <DependentUpon>Today%27sAdmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\WardInfo.aspx.cs">
+      <DependentUpon>WardInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\WardInfo.aspx.designer.cs">
+      <DependentUpon>WardInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shirleyann\WardStaff.aspx.cs">
+      <DependentUpon>WardStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shirleyann\WardStaff.aspx.designer.cs">
+      <DependentUpon>WardStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\LoginChangePassword.aspx.cs">
+      <DependentUpon>LoginChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\LoginChangePassword.aspx.designer.cs">
+      <DependentUpon>LoginChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\LoginForgetPassword.aspx.cs">
+      <DependentUpon>LoginForgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\LoginForgetPassword.aspx.designer.cs">
+      <DependentUpon>LoginForgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\PatientCreate.aspx.cs">
+      <DependentUpon>PatientCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\PatientCreate.aspx.designer.cs">
+      <DependentUpon>PatientCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\PatientDetails.aspx.cs">
+      <DependentUpon>PatientDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\PatientDetails.aspx.designer.cs">
+      <DependentUpon>PatientDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\PatientDoctorVisit.aspx.cs">
+      <DependentUpon>PatientDoctorVisit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\PatientDoctorVisit.aspx.designer.cs">
+      <DependentUpon>PatientDoctorVisit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\PatientGenerateReport.aspx.cs">
+      <DependentUpon>PatientGenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\PatientGenerateReport.aspx.designer.cs">
+      <DependentUpon>PatientGenerateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\PatientList.aspx.cs">
+      <DependentUpon>PatientList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\PatientList.aspx.designer.cs">
+      <DependentUpon>PatientList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\PatientUpdate.aspx.cs">
+      <DependentUpon>PatientUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\PatientUpdate.aspx.designer.cs">
+      <DependentUpon>PatientUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\PatientVisitation.aspx.cs">
+      <DependentUpon>PatientVisitation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\PatientVisitation.aspx.designer.cs">
+      <DependentUpon>PatientVisitation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\StaffAddNewSchedule.aspx.cs">
+      <DependentUpon>StaffAddNewSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\StaffAddNewSchedule.aspx.designer.cs">
+      <DependentUpon>StaffAddNewSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\StaffCreate.aspx.cs">
+      <DependentUpon>StaffCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\StaffCreate.aspx.designer.cs">
+      <DependentUpon>StaffCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\StaffDelete.aspx.cs">
+      <DependentUpon>StaffDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\StaffDelete.aspx.designer.cs">
+      <DependentUpon>StaffDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\StaffDetails.aspx.cs">
+      <DependentUpon>StaffDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\StaffDetails.aspx.designer.cs">
+      <DependentUpon>StaffDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\StaffGenerateReport.aspx.cs">
+      <DependentUpon>StaffGenerateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\StaffGenerateReport.aspx.designer.cs">
+      <DependentUpon>StaffGenerateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\StaffHomePage.aspx.cs">
+      <DependentUpon>StaffHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\StaffHomePage.aspx.designer.cs">
+      <DependentUpon>StaffHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\StaffList.aspx.cs">
+      <DependentUpon>StaffList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\StaffList.aspx.designer.cs">
+      <DependentUpon>StaffList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanAngie\StaffUpdate.aspx.cs">
+      <DependentUpon>StaffUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanAngie\StaffUpdate.aspx.designer.cs">
+      <DependentUpon>StaffUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanDingKang\AddAppointment.aspx.cs">
+      <DependentUpon>AddAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\AddAppointment.aspx.designer.cs">
+      <DependentUpon>AddAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanDingKang\AddAppointment2.aspx.cs">
+      <DependentUpon>AddAppointment2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\AddAppointment2.aspx.designer.cs">
+      <DependentUpon>AddAppointment2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanDingKang\CancelAppointment.aspx.cs">
+      <DependentUpon>CancelAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\CancelAppointment.aspx.designer.cs">
+      <DependentUpon>CancelAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanDingKang\AppointmentHomePage.aspx.cs">
+      <DependentUpon>AppointmentHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\AppointmentHomePage.aspx.designer.cs">
+      <DependentUpon>AppointmentHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanDingKang\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TanDingKang\ReportAppointment.aspx.cs">
+      <DependentUpon>ReportAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\ReportAppointment.aspx.designer.cs">
+      <DependentUpon>ReportAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanDingKang\ReportAppointment2.aspx.cs">
+      <DependentUpon>ReportAppointment2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\ReportAppointment2.aspx.designer.cs">
+      <DependentUpon>ReportAppointment2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanDingKang\SendEmail.aspx.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\SendEmail.aspx.designer.cs">
+      <DependentUpon>SendEmail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanDingKang\EditAppointment.aspx.cs">
+      <DependentUpon>EditAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\EditAppointment.aspx.designer.cs">
+      <DependentUpon>EditAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TanDingKang\UpdateAppointment.aspx.cs">
+      <DependentUpon>UpdateAppointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TanDingKang\UpdateAppointment.aspx.designer.cs">
+      <DependentUpon>UpdateAppointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeHome.aspx.cs">
+      <DependentUpon>WelcomeHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WelcomeHome.aspx.designer.cs">
+      <DependentUpon>WelcomeHome.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3287</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3287/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

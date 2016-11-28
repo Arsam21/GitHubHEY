@@ -1,0 +1,111 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="WebApplication2.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        @media(min-width: 1350px){
+          div#container{
+              width:1350px;
+              margin:auto;
+          }
+        }
+        
+        
+        .container{
+            width:100%;margin:auto;
+        }
+
+        hr{
+            margin:0px;width:100%;
+        }
+        a {
+            text-decoration:none;
+        }
+        .topnav{
+            background-color:transparent;clear:both;height:60px;
+        }
+        .topnav ul{
+            width:100%;float:left;margin:0px;background-color:lightyellow;height:100%;
+        }
+        .topnav ul li a{
+           float:left;padding:10px 20px; 
+        }
+        .topnav ul li{
+            display:inline;background-color:gray;
+        }
+        .topnav a:link{
+            color:black;
+        }
+        .topnav a:hover{
+            color:black;
+        }
+        .topnav a:focus{
+            color:black;
+        }
+        .topnav a:hover{
+            color:black;background-color:khaki;
+        }
+        .topnav a:active{
+            color:black;
+        }
+    </style>
+</head>
+<body style="background-color: lightyellow;">
+    <div id="container" style="background-color: white;">
+        <form id="form1" runat="server">
+            <div id="header">
+                <div style="float:left;margin-left:5%;">
+                    <h1>Hospital Management System</h1>
+                </div>
+                
+                <div style="background-color: tan;height: 25px;width: 300px;float:right;margin-right:5%;box-shadow: 10px 10px 15px #888888;">
+                    <%--<a href="#" style="color:black;margin-right:10px;margin-left:30px;">Log Out</a>--%>
+                    
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="logoutClick" style="color:black;margin-right:10px;margin-left:30px;">Logout</asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton3" runat="server" OnClick="changePwClick" style="color:black;margin-right:10px;margin-left:30px;">Change Password</asp:LinkButton>
+                    <%--<a href="~/TanAngie/LoginChangePassword.aspx" style="color:black;">Change Password</a>--%>
+                </div>
+                <div class="topnav">
+                    <ul>
+                        <li><asp:LinkButton ID="HomePage" runat="server" OnClick="Welcome_Click">Home</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="HomeButton" runat="server" OnClick="HomeButton_Click">Tan Angie</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="RegistraionButton" runat="server" OnClick="RegistraionButton_Click">Pang Yean Peen</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Shirleyann</asp:LinkButton></li>
+                        <li><asp:LinkButton ID="appointment" runat="server" OnClick="appointmentClick">Tan Ding Kang</asp:LinkButton></li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="clear"></div>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="clear"></div>
+            <div class="footer" style="background-color:lightyellow;overflow: hidden; width:100%">
+                <div style="margin-left:5%;">
+                    <ul style="display: inline;list-style-type:none;float:left;padding-left:0px;">
+                        <li><h4>Contact Us</h4></li>
+                        <li>Tel   : +017 2077 053</li>
+                        <li>Email : hopistal@gmail.com</li>
+                    </ul>
+                    <ul style="display: inline;list-style-type:none;float:left;padding-left:0px;margin-left: 50px;">
+                        <li><h4>Support</h4></li>
+                        <li>Tel   : +91023461289084</li>
+                        <li>Fax   : +91023461289084</li>
+                    </ul>
+                    <ul style="display: inline;list-style-type:none;float:right;padding-left:0px;margin-left: 50px;margin-top:50px;  margin-right: 50px;">
+                        <li>Copyright @ 2015 HMS. All right reserved</li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

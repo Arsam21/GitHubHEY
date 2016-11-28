@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NewDataSet>
+  <DropDownList>
+    <Month>January</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>February</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>March</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>April</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>May</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>June</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>July</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>August</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>September</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>October</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>November</Month>
+  </DropDownList>
+  <DropDownList>
+    <Month>December</Month>
+  </DropDownList>
+</NewDataSet>
